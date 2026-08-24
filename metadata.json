@@ -1,0 +1,8 @@
+{
+  "name": "SADIKOU Mouflihath - Portfolio",
+  "description": "Portfolio de SADIKOU Mouflihath, développeuse Full-Stack & créatrice de solutions numériques (Energy-Group, Les Coursiers du Coin, HYGIE+).",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
