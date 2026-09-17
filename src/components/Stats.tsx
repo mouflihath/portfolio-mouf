@@ -69,7 +69,7 @@ export const Stats: React.FC = () => {
   };
 
   return (
-    <section id="stats-section" className="relative py-16 lg:py-24 overflow-hidden bg-white">
+    <section id="stats-section" className="relative py-16 lg:py-20 overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
@@ -80,18 +80,15 @@ export const Stats: React.FC = () => {
             return (
               <div
                 key={stat.id}
-                className="group relative p-6 sm:p-7 rounded-3xl bg-[#F4F7F2] border-2 border-[#A3B899]/60 hover:border-[#4B5320] shadow-md hover:shadow-[#4B5320]/15 transition-all duration-300 hover:scale-[1.03] text-center flex flex-col items-center justify-center overflow-hidden"
+                className="group relative p-6 sm:p-7 rounded-2xl bg-white border border-slate-200 hover:border-slate-300 shadow-sm hover:shadow-lg transition-all duration-200 text-center flex flex-col items-center justify-center overflow-hidden"
               >
-                {/* Background ambient radial */}
-                <div className="absolute -top-12 -right-12 w-28 h-28 bg-[#4B5320]/10 rounded-full blur-xl pointer-events-none group-hover:scale-150 transition-transform" />
-
                 {/* Floating Icon */}
-                <div className="w-12 h-12 rounded-2xl bg-[#E2EBDC] border border-[#A3B899] flex items-center justify-center text-[#4B5320] group-hover:text-[#2E3A20] mb-4 shadow-sm transition-colors">
-                  <IconComp className="w-6 h-6" />
+                <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-slate-700 mb-4 shadow-sm group-hover:scale-105 transition-transform">
+                  <IconComp className="w-6 h-6 text-emerald-600" />
                 </div>
 
                 {/* Big Animated Number */}
-                <div className="font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl text-[#4B5320] mb-2 tracking-tight">
+                <div className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 mb-2 tracking-tight">
                   <span>
                     {displayValue}
                   </span>

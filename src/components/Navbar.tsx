@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sparkles, Code2, ArrowRight } from 'lucide-react';
+import { Menu, X, ArrowRight, Github, Linkedin, Send } from 'lucide-react';
 import { soundFX } from '../utils/audio';
 import { DEVELOPER_INFO } from '../data/portfolioData';
 
@@ -41,35 +41,27 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
         scrolled
-          ? 'py-2.5 bg-white/95 backdrop-blur-xl border-b border-[#A3B899]/60 shadow-md shadow-[#4B5320]/5'
-          : 'py-4 bg-white/80 backdrop-blur-md border-b border-slate-100'
+          ? 'py-2.5 bg-white/95 backdrop-blur-xl border-b border-slate-200 shadow-sm'
+          : 'py-3.5 bg-white/80 backdrop-blur-md border-b border-slate-100'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-        {/* Brand / Logo */}
+        
+        {/* Brand / Logo: Just Portfolio in elegant Poppins typography */}
         <button
           onClick={() => handleItemClick('home')}
-          className="group flex items-center gap-2.5 text-left focus:outline-none cursor-pointer"
+          className="group flex items-center focus:outline-none cursor-pointer py-1"
+          aria-label="Retour à l'accueil"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2E3A20] via-[#4B5320] to-[#5E7044] p-[1.5px] shadow-md shadow-[#4B5320]/20 group-hover:shadow-[#4B5320]/40 transition-all">
-            <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-              <Code2 className="w-5 h-5 text-[#4B5320] group-hover:text-[#2E3A20] transition-colors" />
-            </div>
-          </div>
-          <div className="flex flex-col">
-            <span className="font-heading font-extrabold text-base sm:text-lg tracking-wider text-slate-900 flex items-center gap-1">
-              {DEVELOPER_INFO.firstName.toUpperCase()}
-            </span>
-            <span className="text-[10px] font-mono text-[#4B5320] -mt-1 tracking-wider uppercase font-bold">
-              Développeuse Full-Stack
-            </span>
-          </div>
+          <span className="font-heading font-black text-xl sm:text-2xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
+            Portfolio<span className="text-emerald-500">.</span>
+          </span>
         </button>
 
-        {/* Desktop Nav Links (Pages) */}
-        <nav className="hidden lg:flex items-center gap-1 bg-[#F4F7F2] p-1.5 rounded-full border border-[#A3B899]/60 backdrop-blur-lg shadow-sm">
+        {/* Desktop Nav Links */}
+        <nav className="hidden lg:flex items-center gap-1 bg-slate-100/80 p-1.5 rounded-full border border-slate-200/80">
           {navItems.map((item) => {
             const isActive = currentPage === item.id;
             return (
@@ -77,33 +69,57 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
                 key={item.id}
                 onClick={() => handleItemClick(item.id)}
                 onMouseEnter={() => soundFX.playHover()}
-                className={`relative px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold tracking-wider transition-all duration-200 cursor-pointer ${
+                className={`relative px-3.5 py-1.5 rounded-full text-xs font-heading font-semibold tracking-wider transition-all duration-150 cursor-pointer ${
                   isActive
-                    ? 'text-white bg-[#4B5320] shadow-md shadow-[#4B5320]/25 font-bold'
-                    : 'text-slate-700 hover:text-black hover:bg-[#E2EBDC]'
+                    ? 'text-white bg-slate-900 shadow-sm font-bold'
+                    : 'text-slate-600 hover:text-slate-900 hover:bg-white'
                 }`}
               >
-                <span className="relative z-10">{item.label}</span>
+                {item.label}
               </button>
             );
           })}
         </nav>
 
-        {/* Action Controls */}
-        <div className="hidden sm:flex items-center gap-3">
+        {/* Action Controls & Socials */}
+        <div className="hidden sm:flex items-center gap-2.5">
+          {/* GitHub Icon */}
+          <a
+            href={DEVELOPER_INFO.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => soundFX.playClick()}
+            className="p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all cursor-pointer"
+            title="Profil GitHub"
+            aria-label="GitHub"
+          >
+            <Github className="w-4 h-4" />
+          </a>
+
+          {/* LinkedIn Icon */}
+          <a
+            href={DEVELOPER_INFO.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => soundFX.playClick()}
+            className="p-2 rounded-xl text-slate-600 hover:text-blue-600 hover:bg-slate-100 transition-all cursor-pointer"
+            title="Profil LinkedIn"
+            aria-label="LinkedIn"
+          >
+            <Linkedin className="w-4 h-4" />
+          </a>
+
           {/* Quick Contact CTA */}
           <button
             onClick={() => handleItemClick('contact')}
-            className={`relative group px-4 py-2 rounded-xl text-xs font-heading font-bold tracking-wide overflow-hidden cursor-pointer transition-all ${
+            className={`px-4 py-2 rounded-xl text-xs font-heading font-bold tracking-wider transition-all cursor-pointer flex items-center gap-1.5 ${
               currentPage === 'contact'
-                ? 'bg-[#2E3A20] text-white ring-2 ring-[#4B5320]'
-                : 'bg-[#4B5320] hover:bg-[#3A4B28] text-white shadow-md shadow-[#4B5320]/20 hover:scale-105'
+                ? 'bg-emerald-600 text-white shadow-sm'
+                : 'bg-slate-900 hover:bg-slate-800 text-white shadow-sm hover:shadow'
             }`}
           >
-            <span className="relative z-10 flex items-center gap-1.5">
-              <Sparkles className="w-3.5 h-3.5 text-[#EBF0E6]" />
-              ME CONTACTER
-            </span>
+            <Send className="w-3.5 h-3.5 text-emerald-400" />
+            <span>ME CONTACTER</span>
           </button>
         </div>
 
@@ -114,42 +130,60 @@ export const Navbar: React.FC<NavbarProps> = ({ currentPage, onNavigate }) => {
               soundFX.playClick();
               setMobileMenuOpen(!mobileMenuOpen);
             }}
-            className="p-2.5 rounded-xl bg-[#F4F7F2] border border-[#A3B899]/60 text-slate-800 cursor-pointer"
+            className="p-2 rounded-xl bg-slate-100 border border-slate-200 text-slate-800 cursor-pointer"
             aria-label="Menu de navigation"
           >
-            {mobileMenuOpen ? <X className="w-5 h-5 text-[#4B5320]" /> : <Menu className="w-5 h-5 text-slate-800" />}
+            {mobileMenuOpen ? <X className="w-5 h-5 text-slate-900" /> : <Menu className="w-5 h-5 text-slate-900" />}
           </button>
         </div>
       </div>
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="lg:hidden mt-2 px-4 pt-2 pb-6 bg-white border-b-2 border-[#4B5320] shadow-2xl backdrop-blur-2xl animate-fade-in">
-          <div className="flex flex-col gap-1.5">
+        <div className="lg:hidden mt-2 px-4 pt-2 pb-6 bg-white border-b border-slate-200 shadow-xl animate-fade-in">
+          <div className="flex flex-col gap-1">
             {navItems.map((item) => (
               <button
                 key={item.id}
                 onClick={() => handleItemClick(item.id)}
                 className={`w-full py-2.5 px-4 rounded-xl text-left font-heading font-semibold text-xs tracking-wider transition-all flex items-center justify-between ${
                   currentPage === item.id
-                    ? 'bg-[#4B5320] text-white font-bold shadow-md shadow-[#4B5320]/20'
-                    : 'text-slate-800 hover:bg-[#F4F7F2]'
+                    ? 'bg-slate-900 text-white font-bold'
+                    : 'text-slate-700 hover:bg-slate-50'
                 }`}
               >
                 <span>{item.label}</span>
-                {currentPage === item.id && <ArrowRight className="w-3.5 h-3.5 text-white" />}
+                {currentPage === item.id && <ArrowRight className="w-3.5 h-3.5 text-emerald-400" />}
               </button>
             ))}
-            <button
-              onClick={() => handleItemClick('contact')}
-              className="mt-2 w-full py-3 px-4 rounded-xl bg-[#4B5320] hover:bg-[#3A4B28] text-white font-heading font-bold text-xs tracking-wider text-center shadow-lg shadow-[#4B5320]/25"
-            >
-              ME CONTACTER (WHATSAPP)
-            </button>
+
+            <div className="mt-3 pt-3 border-t border-slate-100 flex items-center justify-between gap-2">
+              <a
+                href={DEVELOPER_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-mono font-semibold text-center"
+              >
+                GitHub
+              </a>
+              <a
+                href={DEVELOPER_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-mono font-semibold text-center"
+              >
+                LinkedIn
+              </a>
+              <button
+                onClick={() => handleItemClick('contact')}
+                className="flex-1 py-2 rounded-xl bg-emerald-600 text-white text-xs font-bold text-center"
+              >
+                Contact
+              </button>
+            </div>
           </div>
         </div>
       )}
     </header>
   );
 };
-

@@ -20,7 +20,8 @@ export interface Project {
 export interface SkillItem {
   id: string;
   name: string;
-  category: 'Frontend' | 'Backend' | 'Database & Cloud' | 'Security & AI' | 'Tools & Design';
+  category: string;
+  masteryType: 'Pratiquée' | 'Notion / Abordée';
   level: number; // 0 to 100
   color: string;
   iconName: string;

@@ -2,127 +2,97 @@
 
 @layer base {
   :root {
-    --font-heading: 'Poppins', system-ui, -apple-system, sans-serif;
-    --font-subheading: 'Poppins', system-ui, -apple-system, sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-    --font-body: 'Poppins', system-ui, -apple-system, sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  }
+
+  html {
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
   }
 
   body {
-    font-family: var(--font-body);
+    font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     color: #0f172a;
     overflow-x: hidden;
   }
 
-  h1, h2, h3, .font-heading {
-    font-family: var(--font-heading);
+  h1, h2, h3, h4, h5, h6, .font-heading, button, input, textarea, select {
+    font-family: 'Poppins', sans-serif;
   }
 
-  .font-mono {
-    font-family: var(--font-mono);
-  }
-
-  .font-sub {
-    font-family: var(--font-subheading);
+  code, pre, kbd, samp, .font-mono {
+    font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace !important;
   }
 }
 
-/* Custom Scrollbar for Light Military Theme */
+/* Modern Clean Developer Scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #f4f7f2;
+  background: #f8fafc;
 }
 ::-webkit-scrollbar-thumb {
-  background: #a3b899;
+  background: #cbd5e1;
   border-radius: 9999px;
-  border: 2px solid #f4f7f2;
+  border: 1px solid #f8fafc;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #4b5320;
+  background: #10b981;
 }
 
-/* Glassmorphic Effects in Military Green Light Mode */
+/* Clean Developer Card & Panels */
+.dev-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px -2px rgba(15, 23, 42, 0.05);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.dev-card:hover {
+  border-color: #10b981;
+  box-shadow: 0 16px 32px -4px rgba(16, 185, 129, 0.12), 0 4px 12px -2px rgba(15, 23, 42, 0.06);
+}
+
+/* Subtle Technical Grid Background */
+.dev-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(15, 23, 42, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.035) 1px, transparent 1px);
+}
+
+.dev-grid-dense {
+  background-size: 16px 16px;
+  background-image: 
+    linear-gradient(to right, rgba(16, 185, 129, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(16, 185, 129, 0.06) 1px, transparent 1px);
+}
+
+/* Glassmorphism with Clean Crisp Borders */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(163, 184, 153, 0.4);
-  box-shadow: 0 10px 30px -5px rgba(46, 58, 32, 0.06);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.04);
 }
 
-.glass-panel-hover {
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.glass-panel-hover:hover {
-  background: rgba(255, 255, 255, 0.98);
-  border-color: rgba(75, 83, 32, 0.6);
-  box-shadow: 0 20px 40px -10px rgba(75, 83, 32, 0.15), inset 0 0 15px rgba(75, 83, 32, 0.05);
-}
-
-.neon-glow-military {
-  box-shadow: 0 0 20px -3px rgba(75, 83, 32, 0.35), 0 0 8px -2px rgba(107, 125, 80, 0.4);
-}
-
-.military-border-gradient {
-  background: linear-gradient(135deg, rgba(75, 83, 32, 0.8), rgba(94, 112, 68, 0.6), rgba(46, 58, 32, 0.9));
-  padding: 1px;
-}
-
-/* Military Cyber Grid background */
-.cyber-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(75, 83, 32, 0.07) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(75, 83, 32, 0.07) 1px, transparent 1px);
-}
-
-.cyber-grid-dense {
-  background-size: 20px 20px;
-  background-image: 
-    linear-gradient(to right, rgba(75, 83, 32, 0.09) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(75, 83, 32, 0.09) 1px, transparent 1px);
-}
-
-@keyframes pulseGlow {
+/* Developer Emerald Pulse */
+@keyframes devPulse {
   0%, 100% {
-    opacity: 0.4;
+    opacity: 1;
     transform: scale(1);
   }
   50% {
-    opacity: 0.8;
-    transform: scale(1.05);
+    opacity: 0.5;
+    transform: scale(1.08);
   }
 }
 
-.animate-pulse-glow {
-  animation: pulseGlow 6s ease-in-out infinite;
-}
-
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(2deg);
-  }
-}
-
-.animate-float-slow {
-  animation: floatSlow 5s ease-in-out infinite;
-}
-
-@keyframes floatReverse {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(12px) rotate(-2deg);
-  }
-}
-
-.animate-float-reverse {
-  animation: floatReverse 6s ease-in-out infinite;
+.animate-dev-pulse {
+  animation: devPulse 2.5s ease-in-out infinite;
 }

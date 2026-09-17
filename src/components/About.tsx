@@ -1,7 +1,21 @@
 import React, { useState } from 'react';
-import { Shield, Sparkles, Cpu, Lightbulb, Code2, Globe, CheckCircle2, UserCheck, Layers } from 'lucide-react';
+import { 
+  Shield, 
+  Sparkles, 
+  Cpu, 
+  Lightbulb, 
+  Code2, 
+  Globe, 
+  CheckCircle2, 
+  UserCheck, 
+  CreditCard, 
+  FolderTree, 
+  Database, 
+  Terminal,
+  Layers,
+  Award
+} from 'lucide-react';
 import { DEVELOPER_INFO } from '../data/portfolioData';
-import { DEVELOPER_AVATAR } from '../assets/avatar';
 import { soundFX } from '../utils/audio';
 
 export const About: React.FC = () => {
@@ -18,47 +32,42 @@ export const About: React.FC = () => {
     {
       icon: Globe,
       title: 'Développement Web Full-Stack',
-      desc: 'Architectures robustes React/Laravel et interfaces performantes à haute vitesse d\'exécution.',
-      color: 'text-[#4B5320]',
-      border: 'border-[#A3B899]/60',
-      bg: 'bg-[#F4F7F2]',
-      badgeBg: 'bg-[#E2EBDC]',
+      desc: 'Applications dynamiques avec React.js, TypeScript (TSX) et architecture robuste sous Laravel 11 & PHP.',
+      badge: 'React & Laravel',
+      color: 'text-emerald-600',
+      badgeBg: 'bg-emerald-50 text-emerald-700 border-emerald-200',
     },
     {
-      icon: Shield,
-      title: 'Cybersécurité & Résilience',
-      desc: 'Conception sécurisée dès la première ligne de code selon les standards stricts OWASP.',
-      color: 'text-[#4B5320]',
-      border: 'border-[#A3B899]/60',
-      bg: 'bg-[#F4F7F2]',
-      badgeBg: 'bg-[#E2EBDC]',
+      icon: CreditCard,
+      title: 'Monétique & Flux Financiers',
+      desc: 'Étude des protocoles bancaires (ISO 8583, ISO8583 Studio), cartes à puce (Java Card) et intégration de FedaPay.',
+      badge: 'FinTech & Sécurité',
+      color: 'text-blue-600',
+      badgeBg: 'bg-blue-50 text-blue-700 border-blue-200',
+    },
+    {
+      icon: FolderTree,
+      title: 'Modélisation & Génie Logiciel UML',
+      desc: 'Conception préalable sous StarUML : formalisation des cas d\'utilisation, diagrammes de classes et de séquences.',
+      badge: 'StarUML & MVC',
+      color: 'text-purple-600',
+      badgeBg: 'bg-purple-50 text-purple-700 border-purple-200',
+    },
+    {
+      icon: Database,
+      title: 'Bases de Données Relationnelles',
+      desc: 'Schémas relationnels MySQL optimisés, requêtes ACID, middlewares d\'authentification et endpoints REST sécurisés.',
+      badge: 'MySQL & SQL',
+      color: 'text-amber-600',
+      badgeBg: 'bg-amber-50 text-amber-700 border-amber-200',
     },
     {
       icon: Sparkles,
-      title: 'CleanTech & Logistique SaaS',
-      desc: 'Supervision énergétique IoT (Energy Group) et dispatching urbain (Les Coursiers du Coin).',
-      color: 'text-[#4B5320]',
-      border: 'border-[#A3B899]/60',
-      bg: 'bg-[#F4F7F2]',
-      badgeBg: 'bg-[#E2EBDC]',
-    },
-    {
-      icon: Lightbulb,
-      title: 'Création de Solutions Métier',
-      desc: 'Résolution de problématiques concrètes à fort impact économique et environnemental.',
-      color: 'text-[#4B5320]',
-      border: 'border-[#A3B899]/60',
-      bg: 'bg-[#F4F7F2]',
-      badgeBg: 'bg-[#E2EBDC]',
-    },
-    {
-      icon: Cpu,
-      title: 'Technologies Modernes & Scalabilité',
-      desc: 'Exploration d\'architectures cloud modulaires, Docker, WebSockets et micro-services.',
-      color: 'text-[#4B5320]',
-      border: 'border-[#A3B899]/60',
-      bg: 'bg-[#F4F7F2]',
-      badgeBg: 'bg-[#E2EBDC]',
+      title: 'Prototypage & Créativité Numérique',
+      desc: 'Maquettage Figma, prompt engineering pour l\'assistance au code, et veille active sur les technologies cloud.',
+      badge: 'Figma & IA',
+      color: 'text-cyan-600',
+      badgeBg: 'bg-cyan-50 text-cyan-700 border-cyan-200',
     },
   ];
 
@@ -66,128 +75,114 @@ export const About: React.FC = () => {
     <section
       id="about"
       onMouseMove={handleMouseMove}
-      className="relative py-24 lg:py-32 overflow-hidden bg-white"
+      className="relative py-20 lg:py-28 overflow-hidden bg-white"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#E2EBDC] border border-[#A3B899] backdrop-blur-md mb-3">
-            <UserCheck className="w-4 h-4 text-[#4B5320]" />
-            <span className="text-xs font-mono font-bold text-[#2E3A20] tracking-wider uppercase">
-              ABOUT ME
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100 border border-slate-200 mb-3">
+            <UserCheck className="w-4 h-4 text-emerald-600" />
+            <span className="text-xs font-mono font-bold text-slate-800 tracking-wider uppercase">
+              PROFIL TECHNIQUE
             </span>
           </div>
-          <h2 className="font-heading font-extrabold text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight">
-            Passionnée par le code, l'architecture logicielle & <span className="text-[#4B5320]">l'impact concret</span>
+          <h2 className="font-heading font-black text-3xl sm:text-4xl lg:text-5xl text-slate-900 tracking-tight">
+            Code rigoureux, modélisation logicielle &amp; <span className="text-emerald-600">solutions monétiques</span>
           </h2>
-          <div className="w-24 h-1 bg-[#4B5320] rounded-full mt-4" />
+          <div className="w-20 h-1 bg-emerald-500 rounded-full mt-4" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Column: 3D Holographic Photo & Floating Badges */}
+          {/* Left Column: Developer ID Card with subtle tilt */}
           <div className="lg:col-span-5 relative flex items-center justify-center">
             
-            {/* Main 3D Card with Tilt */}
             <div
-              className="relative w-full max-w-sm rounded-3xl p-1 bg-gradient-to-b from-[#5E7044] via-[#4B5320] to-[#2E3A20] shadow-2xl shadow-[#4B5320]/20 transition-transform duration-200 ease-out will-change-transform"
+              className="relative w-full max-w-sm rounded-2xl p-6 bg-slate-900 border border-slate-800 shadow-2xl shadow-slate-900/20 text-white transition-transform duration-200 ease-out will-change-transform"
               style={{
-                transform: `perspective(1000px) rotateY(${mousePos.x * 16}deg) rotateX(${-mousePos.y * 16}deg)`,
+                transform: `perspective(1000px) rotateY(${mousePos.x * 12}deg) rotateX(${-mousePos.y * 12}deg)`,
               }}
             >
-              <div className="w-full bg-white rounded-[22px] p-6 flex flex-col items-center text-center overflow-hidden relative border border-[#A3B899]/50">
-                
-                {/* Background Grid inside Card */}
-                <div className="absolute inset-0 cyber-grid-dense opacity-20 pointer-events-none" />
-                
-                {/* Avatar Image Frame */}
-                <div className="relative w-48 h-56 mb-5 rounded-2xl overflow-hidden border-2 border-[#4B5320] shadow-md group">
-                  <img
-                    src={DEVELOPER_AVATAR}
-                    alt={DEVELOPER_INFO.fullName}
-                    className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#2E3A20]/80 via-transparent to-transparent" />
-                  <div className="absolute bottom-2 left-2 right-2 flex items-center justify-center">
-                    <span className="text-[11px] font-mono font-bold text-white bg-[#4B5320]/90 px-3 py-1 rounded-lg border border-[#A3B899]/40">
-                      DÉVELOPPEUSE FULL-STACK
-                    </span>
-                  </div>
+              {/* Header */}
+              <div className="flex items-center justify-between pb-4 border-b border-slate-800">
+                <div className="flex items-center gap-2">
+                  <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
+                  <span className="font-mono text-xs text-emerald-400 font-bold">DEV_VERIFIED</span>
                 </div>
+                <span className="text-[10px] font-mono text-slate-400">ID: SADIKOU-MOUFLIHATH</span>
+              </div>
 
-                <h3 className="font-heading font-bold text-xl sm:text-2xl text-slate-900 mb-1">
+              {/* Center Monogram */}
+              <div className="my-6 flex flex-col items-center text-center">
+                <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-emerald-600 to-slate-900 border border-emerald-500/40 flex items-center justify-center text-white font-heading font-black text-3xl shadow-lg mb-3">
+                  SM
+                </div>
+                <h3 className="font-heading font-extrabold text-xl text-white">
                   {DEVELOPER_INFO.fullName}
                 </h3>
-                <p className="text-xs font-mono text-[#4B5320] font-bold mb-4 tracking-wider">
-                  React • Laravel • MySQL • PHP
+                <p className="text-xs font-mono text-emerald-400 font-medium mt-1">
+                  Développeuse Full-Stack &amp; Monétique
                 </p>
+                <p className="text-xs text-slate-400 mt-1">
+                  📍 Bénin (Centre d'accueil) • Cotonou
+                </p>
+              </div>
 
-                <div className="w-full pt-4 border-t border-slate-200 flex items-center justify-between text-xs font-mono text-slate-700">
-                  <span>📍 Bénin (Centre d'accueil)</span>
-                  <span className="text-[#4B5320] font-bold flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-[#4B5320] animate-ping" />
-                    Disponible
-                  </span>
+              {/* Core Badges */}
+              <div className="space-y-2 text-xs font-mono border-t border-slate-800 pt-4">
+                <div className="flex justify-between text-slate-300">
+                  <span className="text-slate-500">Formation :</span>
+                  <span className="text-slate-200 font-medium">Licence en Monétique</span>
                 </div>
+                <div className="flex justify-between text-slate-300">
+                  <span className="text-slate-500">Institut :</span>
+                  <span className="text-slate-200">Golden Academy (Cotonou)</span>
+                </div>
+                <div className="flex justify-between text-slate-300">
+                  <span className="text-slate-500">Stack :</span>
+                  <span className="text-emerald-400 font-semibold">React • Laravel • MySQL</span>
+                </div>
+              </div>
+
+              {/* Footer */}
+              <div className="mt-5 pt-3 border-t border-slate-800 flex items-center justify-between text-[11px] font-mono text-slate-400">
+                <span>Statut : Disponible</span>
+                <span className="text-emerald-400 font-semibold">Open to Work</span>
               </div>
             </div>
 
-            {/* 4 Interactive Floating 3D Badges */}
+            {/* Floating Subtle Micro Badges */}
             <div
-              onMouseEnter={() => soundFX.playHover()}
-              className="absolute -top-4 -left-4 sm:left-2 px-4 py-2 rounded-2xl bg-white border-2 border-[#4B5320] shadow-xl shadow-[#4B5320]/15 flex items-center gap-2 cursor-pointer transition-transform duration-300 hover:scale-110 will-change-transform"
+              className="absolute -top-3 -left-3 sm:left-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 shadow-lg text-xs font-mono font-bold text-slate-800 flex items-center gap-1.5 transition-transform duration-300"
               style={{
-                transform: `translate(${mousePos.x * -25}px, ${mousePos.y * -25}px)`,
+                transform: `translate(${mousePos.x * -15}px, ${mousePos.y * -15}px)`,
               }}
             >
-              <Sparkles className="w-4 h-4 text-[#4B5320] animate-pulse" />
-              <span className="font-heading font-bold text-xs text-slate-900">Full-Stack</span>
+              <Code2 className="w-4 h-4 text-emerald-600" />
+              <span>React &amp; Laravel 11</span>
             </div>
 
             <div
-              onMouseEnter={() => soundFX.playHover()}
-              className="absolute -top-4 -right-4 sm:right-2 px-4 py-2 rounded-2xl bg-white border-2 border-[#4B5320] shadow-xl shadow-[#4B5320]/15 flex items-center gap-2 cursor-pointer transition-transform duration-300 hover:scale-110 will-change-transform"
+              className="absolute -bottom-3 -right-3 sm:right-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200 shadow-lg text-xs font-mono font-bold text-slate-800 flex items-center gap-1.5 transition-transform duration-300"
               style={{
-                transform: `translate(${mousePos.x * 30}px, ${mousePos.y * -20}px)`,
+                transform: `translate(${mousePos.x * 15}px, ${mousePos.y * 15}px)`,
               }}
             >
-              <Code2 className="w-4 h-4 text-[#4B5320]" />
-              <span className="font-heading font-bold text-xs text-slate-900">Developer</span>
-            </div>
-
-            <div
-              onMouseEnter={() => soundFX.playHover()}
-              className="absolute -bottom-6 -left-4 sm:left-4 px-4 py-2 rounded-2xl bg-white border-2 border-[#4B5320] shadow-xl shadow-[#4B5320]/15 flex items-center gap-2 cursor-pointer transition-transform duration-300 hover:scale-110 will-change-transform"
-              style={{
-                transform: `translate(${mousePos.x * -20}px, ${mousePos.y * 30}px)`,
-              }}
-            >
-              <CheckCircle2 className="w-4 h-4 text-[#4B5320]" />
-              <span className="font-heading font-bold text-xs text-slate-900">Problem Solver</span>
-            </div>
-
-            <div
-              onMouseEnter={() => soundFX.playHover()}
-              className="absolute -bottom-6 -right-4 sm:right-4 px-4 py-2 rounded-2xl bg-white border-2 border-[#4B5320] shadow-xl shadow-[#4B5320]/15 flex items-center gap-2 cursor-pointer transition-transform duration-300 hover:scale-110 will-change-transform"
-              style={{
-                transform: `translate(${mousePos.x * 25}px, ${mousePos.y * 25}px)`,
-              }}
-            >
-              <Cpu className="w-4 h-4 text-[#4B5320]" />
-              <span className="font-heading font-bold text-xs text-slate-900">Clean Tech</span>
+              <CreditCard className="w-4 h-4 text-blue-600" />
+              <span>Monétique &amp; FedaPay</span>
             </div>
 
           </div>
 
-          {/* Right Column: Narrative & 5 Passion Pillars */}
+          {/* Right Column: Narrative & Passion Pillars */}
           <div className="lg:col-span-7 flex flex-col">
-            <h3 className="font-heading font-bold text-2xl sm:text-3xl text-slate-900 mb-4">
-              Créer des ponts entre <span className="text-[#4B5320]">l'ergonomie fluide</span> et la <span className="text-[#2E3A20]">rigueur technique</span>
+            <h3 className="font-heading font-black text-2xl sm:text-3xl text-slate-900 mb-4 leading-snug">
+              Créer des ponts entre <span className="text-emerald-600">l'ergonomie applicative</span> et la <span className="text-slate-900">sécurité des flux</span>
             </h3>
             
-            <p className="text-slate-700 text-base leading-relaxed mb-6 font-normal">
-              Je suis une développeuse passionnée par la création de solutions numériques qui allient performance, esthétique et robustesse. Mon approche repose sur une compréhension approfondie des besoins réels des utilisateurs tout en appliquant des standards stricts d'ingénierie logicielle et de cybersécurité.
+            <p className="text-slate-600 text-base leading-relaxed mb-6 font-normal">
+              Développeuse Full-Stack et diplômée en Monétique résidant au Bénin (Centre d'accueil), je combine la conception d'applications web réactives (<strong className="text-slate-900 font-semibold">React, TypeScript, Laravel 11</strong>) et l'analyse minutieuse des architectures logicielles. Mon travail allie modélisation formelle en <strong className="text-slate-900 font-semibold">StarUML</strong>, rigueur du code et intégration de services de paiement en ligne (<strong className="text-slate-900 font-semibold">FedaPay, protocoles ISO 8583</strong>).
             </p>
 
             {/* Passion Grid Cards */}
@@ -198,29 +193,36 @@ export const About: React.FC = () => {
                   <div
                     key={index}
                     onMouseEnter={() => soundFX.playHover()}
-                    className={`p-4 rounded-2xl ${p.bg} border ${p.border} shadow-sm transition-all duration-300 hover:scale-[1.02] hover:shadow-md`}
+                    className="p-4 rounded-xl bg-white border border-slate-200 hover:border-emerald-500/80 shadow-sm hover:shadow-md transition-all duration-200 group"
                   >
-                    <div className="flex items-center gap-2.5 mb-1.5">
-                      <div className={`p-1.5 rounded-lg ${p.badgeBg} ${p.color}`}>
-                        <IconComponent className="w-4 h-4" />
+                    <div className="flex items-center justify-between mb-2">
+                      <div className="flex items-center gap-2">
+                        <div className={`p-1.5 rounded-lg bg-slate-100 ${p.color}`}>
+                          <IconComponent className="w-4 h-4" />
+                        </div>
+                        <h4 className="font-heading font-bold text-sm text-slate-900">
+                          {p.title}
+                        </h4>
                       </div>
-                      <h4 className="font-heading font-bold text-sm text-slate-900">
-                        {p.title}
-                      </h4>
                     </div>
-                    <p className="text-xs text-slate-600 leading-relaxed font-normal">
+                    <p className="text-xs text-slate-600 leading-relaxed font-normal mb-2">
                       {p.desc}
                     </p>
+                    <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-mono font-semibold border ${p.badgeBg}`}>
+                      {p.badge}
+                    </span>
                   </div>
                 );
               })}
             </div>
 
             {/* Quote / Philosophy Bar */}
-            <div className="p-4 rounded-2xl bg-[#F4F7F2] border border-[#A3B899]/60 flex items-center gap-3 shadow-sm">
-              <Layers className="w-5 h-5 text-[#4B5320] shrink-0" />
-              <p className="text-xs font-mono text-[#2E3A20] font-medium">
-                « Le code n'est pas seulement une suite d'instructions, c'est l'art de donner vie à des solutions performantes et humaines. »
+            <div className="p-4 rounded-xl bg-slate-50 border border-slate-200 flex items-center gap-3">
+              <div className="p-2 rounded-lg bg-slate-900 text-emerald-400">
+                <Terminal className="w-5 h-5" />
+              </div>
+              <p className="text-xs sm:text-sm font-mono text-slate-800 leading-relaxed">
+                <span className="text-slate-900 font-bold">&laquo; Un code propre, une architecture modélisée et des transactions sécurisées : voilà ma signature. &raquo;</span>
               </p>
             </div>
 

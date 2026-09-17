@@ -27,46 +27,43 @@ async function startServer() {
 
   // System instruction for Mouflihath's AI Assistant
   const SYSTEM_INSTRUCTION = `Tu es l'assistant IA officiel et interactif du portfolio de SADIKOU Mouflihath.
-Ton rôle est d'informer avec enthousiasme, clarté, concision et professionnalisme les visiteurs, recruteurs, clients et partenaires sur son profil, ses compétences, ses projets et ses coordonnées.
+Ton rôle est d'informer avec précision, clarté, concision et professionnalisme les visiteurs, recruteurs et partenaires sur son profil, ses compétences réelles, ses projets et ses coordonnées.
 
 Profil de Mouflihath :
-- Nom complet : SADIKOU Mouflihath
-- Titre : Développeuse Full-Stack • Creative Developer • Digital Builder
-- Localisation : Bénin (Centre d'accueil) • Disponible pour opportunités Remote, Freelance, B2B ou Internationales.
-- Contact WhatsApp officiel : +229 01 42 81 55 62 (https://wa.me/2290142815562)
+- Nom complet : SADIKOU Mouflihath A. Mobereola
+- Titre : Développeuse Full Stack Junior
+- Formation & Diplôme : Diplômée en Monétique à l'Institut Supérieur Golden Academy (Akpakpa, Cotonou) • Baccalauréat D au Complexe Scolaire Saint Augustin (CSSA).
+- Localisation : Cotonou, Bénin • Disponible pour opportunités en entreprise, Full-Stack, B2B ou Remote.
+- Contact WhatsApp officiel unique : +229 01 42 81 55 62 (https://wa.me/2290142815562) — NOTE : l'ancien numéro 0147876093 a été supprimé.
 - Email : kikesadikou@gmail.com
 - GitHub : https://github.com/mouflihath-dev
 - LinkedIn : https://linkedin.com/in/mouflihath-sadikou
+- Langues : Français (Bien), Fon (Assez bien)
+
+Compétences & Réalisations clés du CV :
+1. Stage Professionnel : Stage Académique chez KingSoft Digital (18 mai – 18 juin 2026, Cotonou, Bénin) — Initiation au développement web professionnel avec Laravel et découverte du cycle de développement en entreprise.
+2. Frontend : React.js, JavaScript, Tailwind CSS, Alpine.js, HTML5, CSS3.
+3. Backend : PHP, Laravel, Blade, Base de données MySQL.
+4. Modélisation & Outils : Modélisation UML (StarUML), Maquettage d'interface (Figma), Git / GitHub (clés SSH), VS Code, suite bureautique (Word, Excel, PowerPoint).
+5. Monétique & Systèmes de Paiement : Norme internationale ISO 8583 (transactions bancaires), passerelle FedaPay, notions de Java Card et simulateur Cisco Packet Tracer.
 
 Projets majeurs :
-1. ENERGY GROUP (Démo en ligne : https://energy-groupe.tech/) :
-   - Plateforme SaaS industrielle de monitoring et gestion de flux énergétiques (solaire, éolien, réseaux électriques).
-   - Technologies : React.js, Laravel 11, MySQL, Télémétrie IoT, WebSockets, Recharts / D3.js, Docker.
-   - Impact : -28% de déperdition énergétique constatée sur les sites pilotes.
-
+1. ENERGYGROUPE (Démo en ligne : https://energy-groupe.tech/) :
+   - Site vitrine responsive pour une entreprise de travaux d'électricité et plomberie.
+   - Technologies : HTML, CSS, JavaScript, React.js.
 2. LES COURSIERS DU COIN (Démo en ligne : https://courier-corner-app.vercel.app/) :
-   - Solution de logistique urbaine éco-responsable et dispatching automatisé.
-   - Technologies : React 19, TypeScript, Laravel, MySQL spatial, WebSockets GPS en temps réel.
-   - Métrique : Livraison moyenne en moins de 24 minutes en zone urbaine dense.
-
-3. ARIYA (Démo en ligne : https://curated-event-crew.lovable.app) :
-   - Marketplace événementielle B2B & B2C reliant organisateurs et prestataires qualifiés.
-   - Technologies : React, TypeScript, Laravel, Pusher WebSockets, Stripe, MySQL.
-   - Fonctionnalités : Messagerie temps réel chiffrée, devis dynamiques, calendrier synchronisé.
-
-4. HYGIE+ :
-   - Plateforme de télémédecine et gestion de dossiers médicaux sécurisés avec géolocalisation d'urgence.
-
-Stack technique & Savoir-faire :
-- Backend : Laravel 11, PHP 8+, Node.js/Express, Architecture RESTful & GraphQL, Authentification OAuth2 / JWT.
-- Frontend : React.js, TypeScript, Tailwind CSS, Three.js, Canvas, HTML5/CSS3 moderne.
-- Données & Systèmes : MySQL (optimisation spatiale & indexation séries temporelles), Redis, Docker, Git.
-- Spécialités : Plateformes SaaS d'envergure, temps réel (WebSockets), sécurité (bonnes pratiques OWASP), UI/UX responsive.
+   - Application web de mise en relation livreurs / clients (Cotonou & Calavi).
+   - Technologies : HTML, CSS, JavaScript, React.js.
+3. HYGIE+ :
+   - Plateforme de comparaison de prix entre pharmacies (Mémoire académique en équipe avec Lauriane FAGBEMI).
+   - Modélisation UML (StarUML), maquettage Figma, développement React.js + Laravel/Blade, base de données MySQL.
+4. ARIYA (Démo en ligne : https://curated-event-crew.lovable.app) :
+   - Plateforme événementielle de mise en relation d'organisateurs et prestataires.
 
 Consignes de réponse :
-- Sois chaleureux, poli et direct.
-- Formate tes réponses avec des puces Markdown claires si nécessaire.
-- Si le visiteur souhaite démarrer un projet, collaborer ou poser une question précise, propose-lui de joindre Mouflihath directement via WhatsApp (+229 01 42 81 55 62) ou par le formulaire de contact.`;
+- Sois chaleureux, courtois, direct et objectif.
+- Fais bien la distinction entre ses compétences de production réellement pratiquées (Laravel, React, PHP, MySQL, UML, FedaPay, ISO 8583) et ses notions en veille.
+- Si le visiteur souhaite collaborer ou poser une question précise, propose-lui de joindre Mouflihath sur WhatsApp (+229 01 42 81 55 62) ou par email.`;
 
   // API Route: Health check
   app.get('/api/health', (req, res) => {
@@ -111,14 +108,14 @@ Consignes de réponse :
         const lowerMsg = message.toLowerCase();
         let fallbackReply = '';
 
-        if (lowerMsg.includes('projet') || lowerMsg.includes('energy') || lowerMsg.includes('coursier') || lowerMsg.includes('ariya')) {
-          fallbackReply = `Mouflihath a développé plusieurs plateformes d'envergure :\n\n- ⚡ **ENERGY GROUP** (https://energy-groupe.tech/) : Plateforme SaaS industrielle de monitoring énergétique (React, Laravel 11, IoT).\n- 🚴 **Les Coursiers du Coin** (https://courier-corner-app.vercel.app/) : Application de livraison éco-responsable avec tracking GPS en temps réel.\n- 🎉 **ARIYA** (https://curated-event-crew.lovable.app) : Marketplace événementielle avec messagerie instantanée WebSockets.`;
+        if (lowerMsg.includes('projet') || lowerMsg.includes('energy') || lowerMsg.includes('coursier') || lowerMsg.includes('ariya') || lowerMsg.includes('hygie')) {
+          fallbackReply = `Mouflihath a développé et conçu plusieurs projets majeurs :\n\n- ⚡ **ENERGY GROUP** (https://energy-groupe.tech/) : Plateforme SaaS industrielle de monitoring et gestion de flux énergétiques (React, Laravel 11, MySQL).\n- 🚴 **Les Coursiers du Coin** (https://courier-corner-app.vercel.app/) : Application de logistique urbaine et dispatching rapide.\n- 🎉 **ARIYA** (https://curated-event-crew.lovable.app) : Marketplace événementielle reliant organisateurs et prestataires.\n- 🏥 **HYGIE+** : Solution santé/pharmacie intégrant la passerelle de paiement **FedaPay** et modélisée en **UML** (ArgoUML).`;
         } else if (lowerMsg.includes('contact') || lowerMsg.includes('whatsapp') || lowerMsg.includes('téléphone') || lowerMsg.includes('numéro') || lowerMsg.includes('joindre')) {
-          fallbackReply = `Vous pouvez contacter directement Mouflihath :\n\n- 💬 **WhatsApp Direct :** 01 42 81 55 62 (+229 01 42 81 55 62)\n- ✉️ **Email :** kikesadikou@gmail.com\n- 📍 **Localisation :** Bénin (Centre d'accueil) • Disponible Remote & International.`;
-        } else if (lowerMsg.includes('techno') || lowerMsg.includes('stack') || lowerMsg.includes('compétence') || lowerMsg.includes('laravel') || lowerMsg.includes('react')) {
-          fallbackReply = `Mouflihath est experte en développement Full-Stack avec pour stack principale :\n\n- **Backend :** Laravel 11, PHP 8+, RESTful APIs, WebSockets\n- **Frontend :** React.js, TypeScript, Tailwind CSS\n- **Bases de données :** MySQL, Redis\n- **DevOps & Outils :** Docker, Git, Linux`;
+          fallbackReply = `Vous pouvez contacter directement Mouflihath :\n\n- 💬 **WhatsApp Direct :** 01 42 81 55 62 (+229 01 42 81 55 62)\n- ✉️ **Email :** kikesadikou@gmail.com\n- 📍 **Localisation :** Bénin (Centre d'accueil) • Disponible pour opportunités Remote, Freelance & Internationales.`;
+        } else if (lowerMsg.includes('techno') || lowerMsg.includes('stack') || lowerMsg.includes('compétence') || lowerMsg.includes('laravel') || lowerMsg.includes('react') || lowerMsg.includes('monétique')) {
+          fallbackReply = `Voici le profil technique extrait de son CV :\n\n- **Frontend :** HTML, CSS, JavaScript, React.js, Tailwind CSS, Alpine.js.\n- **Backend :** PHP, Laravel, Blade, Base de données MySQL.\n- **Modélisation & Autres :** Modélisation UML (StarUML), Maquettage (Figma), Git / GitHub.\n- **Logiciels maîtrisés :** StarUML, Figma, Visual Studio Code, Word, Excel, PowerPoint.\n- **Spécialisation Monétique :** Norme bancaire ISO 8583, passerelle FedaPay, notions Java Card.`;
         } else {
-          fallbackReply = `Bonjour ! Je suis l'assistant virtuel de **SADIKOU Mouflihath**, Développeuse Full-Stack. Je peux vous renseigner sur ses projets majeurs (*Energy Group*, *Les Coursiers du Coin*, *ARIYA*), ses compétences techniques ou vous aider à la contacter directement sur **WhatsApp au 01 42 81 55 62**. Comment puis-je vous aider ?`;
+          fallbackReply = `Bonjour ! Je suis l'assistant virtuel de **SADIKOU Mouflihath A. Mobereola**, Développeuse Full Stack Junior et diplômée en Monétique. Je peux vous renseigner sur ses projets majeurs (*EnergyGroupe*, *Les Coursiers du Coin*, *HYGIE+*), son stage académique chez *KingSoft Digital*, ou vous aider à la joindre directement sur **WhatsApp au 01 42 81 55 62**. Comment puis-je vous aider ?`;
         }
 
         return res.json({ reply: fallbackReply });

@@ -3,20 +3,49 @@ import energyGroupImg from '../assets/images/energy_group_preview_1787531234512.
 
 export const DEVELOPER_INFO = {
   firstName: 'Mouflihath',
-  fullName: 'SADIKOU Mouflihath',
-  title: 'Full-Stack Developer • Creative Developer • Digital Builder',
-  tagline: 'Architecte de solutions numériques intuitives, sécurisées et performantes.',
-  shortBio: 'Passionnée par le développement Full-Stack robuste, l\'architecture moderne et les solutions web à fort impact. Je conçois des plateformes SaaS d\'envergure (Energy Group, Les Coursiers du Coin, HYGIE+, ARIYA) alliant performance, scalabilité et ergonomie.',
-  location: 'Bénin (Centre d\'accueil) • Remote & International',
+  fullName: 'SADIKOU Mouflihath A. Mobereola',
+  title: 'Développeuse Full Stack Junior',
+  formation: 'Diplômée en Monétique (Institut Supérieur Golden Academy)',
+  tagline: 'Développeuse Full Stack Junior & Diplômée en Monétique : applications React, back-ends Laravel et modélisation UML.',
+  shortBio: 'Diplômée en Monétique, je me suis formée en autodidacte au développement web à travers plusieurs projets concrets : applications React, back-ends Laravel et modélisation UML. Rigoureuse et orientée solution, je souhaite mettre mes compétences techniques au service d’une équipe de développement full stack.',
+  location: 'Cotonou, Bénin',
   email: 'kikesadikou@gmail.com',
   whatsapp: ['01 42 81 55 62'],
   whatsappLinks: ['https://wa.me/2290142815562'],
-  github: 'https://github.com/mouflihath-dev',
-  linkedin: 'https://linkedin.com/in/mouflihath-sadikou',
+  github: 'https://github.com/mouflihath',
+  linkedin: 'https://www.linkedin.com/in/mouflihath-sadikou-650a5b363/',
   twitter: 'https://twitter.com',
   discord: 'mouflihath_dev',
-  yearsOfExperience: 4,
-  completedProjectsCount: 22,
+  yearsOfExperience: 2,
+  completedProjectsCount: 12,
+  languages: [
+    { name: 'Français', level: 'Bien' },
+    { name: 'Fon', level: 'Assez bien' },
+  ],
+  masteredSoftware: ['StarUML', 'Figma', 'Visual Studio Code', 'Word', 'Excel', 'PowerPoint'],
+  educationDetails: [
+    {
+      degree: 'Licence en Monétique',
+      institution: 'Institut Supérieur Golden Academy (GOLDEN ACADEMY)',
+      period: 'Sept 2025 - 2026',
+      location: 'Akpakpa ; Cotonou au BÉNIN',
+      description: 'Titulaire de la Licence en Monétique à Institut Supérieur Golden Academy à Akpakpa ; Cotonou au BÉNIN.',
+    },
+    {
+      degree: 'Baccalauréat D',
+      institution: 'Complexe Scolaires Saint Augustin (CSSA)',
+      period: 'Sep 2022 - Juin 2023',
+      location: 'Cotonou au BÉNIN',
+      description: 'Titulaire du BAC D (Baccalauréat série Scientifique D) à CSSA (Complexe Scolaires Saint Augustin) à Cotonou au BÉNIN.',
+    },
+  ],
+  academicStage: {
+    company: 'KingSoft Digital',
+    period: '18 mai – 18 juin 2026',
+    location: 'Cotonou, Bénin',
+    role: 'Stage Académique',
+    description: 'Initiation au développement web professionnel avec Laravel. Découverte du cycle de développement en environnement d’entreprise.',
+  },
 };
 
 export const PROJECTS_DATA: Project[] = [
@@ -42,7 +71,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: '-28% de déperdition énergétique constatée chez les sites industriels pilotes',
     demoUrl: 'https://energy-groupe.tech/',
-    githubUrl: 'https://github.com/mouflihath-dev/energy-group-platform',
+    githubUrl: 'https://github.com/mouflihath/energy-group-platform',
     architectureDetails: 'Architecture microservices événementielle : Frontend réactif React 19 / Vite avec graphiques D3 interactifs, backend d\'ingestion IoT asynchrone sous Laravel 11 et base de données MySQL optimisée pour les séries temporelles.'
   },
   {
@@ -67,7 +96,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: 'Délai moyen de livraison inférieur à 24 minutes en zone urbaine dense',
     demoUrl: 'https://courier-corner-app.vercel.app/',
-    githubUrl: 'https://github.com/mouflihath-dev/les-coursiers-du-coin',
+    githubUrl: 'https://github.com/mouflihath/les-coursiers-du-coin',
     architectureDetails: 'Architecture hybride Web / PWA : Frontend React 19 connecté via WebSockets temps réel au serveur de géolocalisation, API Laravel et base relationnelle MySQL avec indexation spatiale géodésique.'
   },
   {
@@ -91,7 +120,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: '99.4% de satisfaction utilisateur sur plus de 120 événements testés',
     demoUrl: 'https://curated-event-crew.lovable.app',
-    githubUrl: 'https://github.com/amina-dev/ariya-event-marketplace',
+    githubUrl: 'https://github.com/mouflihath/ariya-event-marketplace',
     architectureDetails: 'Architecture Single-Page Application avec synchronisation d\'état optimisée via React Context & Hooks, Backend Laravel sous PHP 8.3 avec WebSockets Pusher et base de données MySQL.'
   },
   {
@@ -116,7 +145,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: '+45% de rapidité d\'accès aux médicaments d\'urgence',
     demoUrl: 'https://hygie-plus-demo.preview.app',
-    githubUrl: 'https://github.com/amina-dev/hygie-plus-platform',
+    githubUrl: 'https://github.com/mouflihath/hygie-plus-platform',
     architectureDetails: 'Architecture microservices découplée : Frontend React 19 SPA réactif, Backend API RESTful Laravel avec files d\'attente Redis, base de données relationnelle MySQL indexée spatialement.'
   },
   {
@@ -140,7 +169,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: 'Plus de 250 vecteurs de failles analysés en moins de 15 secondes',
     demoUrl: 'https://cybershield-scanner.preview.app',
-    githubUrl: 'https://github.com/amina-dev/cybershield-security-suite',
+    githubUrl: 'https://github.com/mouflihath/cybershield-security-suite',
     architectureDetails: 'Moteur d\'audit asynchrone Node/Python avec sandboxing Docker sécurisé, visualiseur 3D Three.js exploitant WebGL pour le rendu de graphes de vulnérabilités.'
   },
   {
@@ -163,7 +192,7 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: 'Gain de 40% sur le temps de prototypage frontend',
     demoUrl: 'https://nexus-ai-workspace.preview.app',
-    githubUrl: 'https://github.com/amina-dev/nexus-ai-workspace',
+    githubUrl: 'https://github.com/mouflihath/nexus-ai-workspace',
     architectureDetails: 'Front-end React 19 connecté aux APIs Gemini avec streaming SSE (Server-Sent Events) et gestionnaire de contexte local chiffré.'
   },
   {
@@ -186,199 +215,348 @@ export const PROJECTS_DATA: Project[] = [
     ],
     metrics: 'Rendu 60 FPS garanti même sur smartphones milieu de gamme',
     demoUrl: 'https://aurora-3d-experience.preview.app',
-    githubUrl: 'https://github.com/amina-dev/aurora-webgl-studio',
+    githubUrl: 'https://github.com/mouflihath/aurora-webgl-studio',
     architectureDetails: 'Canvas WebGL dédié avec shaders GLSL personnalisés, post-processing bloom léger et chargement asynchrone des assets 3D.'
   }
 ];
 
 export const SKILLS_DATA: SkillItem[] = [
+  // --- COMPÉTENCES RÉELLEMENT PRATIQUÉES ---
   {
     id: 'laravel',
-    name: 'Laravel',
-    category: 'Backend',
-    level: 95,
+    name: 'Laravel & Laravel 11',
+    category: 'Backend & APIs',
+    masteryType: 'Pratiquée',
+    level: 94,
     color: '#FF2D20',
     iconName: 'Server',
-    description: 'Développement d\'architectures MVC robustes, Eloquent ORM, files d\'attente, API REST sécurisées et authentification multi-rôles.',
+    description: 'Framework backend principal : architecture MVC, Eloquent ORM, migrations, seeders, contrôleurs, middlewares et gestion des routes API.',
     popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+', 'ARIYA']
   },
   {
     id: 'php',
     name: 'PHP 8.x',
-    category: 'Backend',
-    level: 92,
+    category: 'Backend & APIs',
+    masteryType: 'Pratiquée',
+    level: 90,
     color: '#777BB4',
     iconName: 'Code2',
-    description: 'Programmation orientée objet avancée, design patterns, types stricts, performances optimisées et sécurité backend.',
-    popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+']
+    description: 'Programmation orientée objet (POO), types stricts, traitement des requêtes HTTP et logique métier développée dans le cursus en Monétique.',
+    popularProjects: ['Energy-Group', 'Backend Monétique', 'HYGIE+']
   },
   {
     id: 'react',
     name: 'React.js',
-    category: 'Frontend',
-    level: 96,
+    category: 'Web Full-Stack',
+    masteryType: 'Pratiquée',
+    level: 95,
     color: '#61DAFB',
     iconName: 'Atom',
-    description: 'Composants fonctionnels, Hooks personnalisés, gestion d\'état moderne, Suspense, performance et interfaces réactives.',
-    popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+', 'ARIYA', 'NEXUS AI']
+    description: 'Bibliothèque frontend moderne : composants fonctionnels, Hooks (useState, useEffect, custom hooks), gestion d\'état et Single-Page Applications (SPA).',
+    popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'ARIYA', 'HYGIE+']
   },
   {
     id: 'typescript',
-    name: 'TypeScript',
-    category: 'Frontend',
-    level: 92,
+    name: 'React + TypeScript (TSX)',
+    category: 'Web Full-Stack',
+    masteryType: 'Pratiquée',
+    level: 90,
     color: '#3178C6',
     iconName: 'FileCode',
-    description: 'Typage strict, interfaces génériques, architecture d\'applications scalables sans bugs à l\'exécution.',
-    popularProjects: ['Les Coursiers du Coin', 'CYBER-SHIELD', 'Portfolio 3D']
+    description: 'Typage statique strict avec React TSX, définition d\'interfaces solides, typage des props d\'API et élimination des bugs à la compilation.',
+    popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'ARIYA']
   },
   {
-    id: 'javascript',
-    name: 'JavaScript (ES6+)',
-    category: 'Frontend',
-    level: 98,
-    color: '#F7DF1E',
-    iconName: 'Cpu',
-    description: 'DOM manipulation poussée, programmation asynchrone (Async/Await), Web APIs, Canvas et animations interactives.',
-    popularProjects: ['Energy-Group', 'HYGIE+', 'ARIYA', 'AURORA 3D']
+    id: 'vite',
+    name: 'Vite',
+    category: 'Web Full-Stack',
+    masteryType: 'Pratiquée',
+    level: 92,
+    color: '#646CFF',
+    iconName: 'Zap',
+    description: 'Outillage frontend moderne et rapide, bundling optimisé pour la production et environnement de développement réactif avec React.',
+    popularProjects: ['Energy-Group', 'Portfolio', 'ARIYA']
   },
   {
     id: 'mysql',
     name: 'MySQL',
-    category: 'Database & Cloud',
-    level: 90,
+    category: 'Base de Données',
+    masteryType: 'Pratiquée',
+    level: 88,
     color: '#4479A1',
     iconName: 'Database',
-    description: 'Modélisation relationnelle (MCD/MLD), optimisation d\'index, requêtes complexes, transactions ACID et intégrité des données.',
+    description: 'Base de données relationnelle principale : modélisation (MCD/MLD), intégrité référentielle, indexation, jointures et requêtes optimisées.',
     popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+', 'ARIYA']
   },
   {
     id: 'rest-api',
-    name: 'REST API',
-    category: 'Backend',
-    level: 95,
+    name: 'API REST & JSON',
+    category: 'Backend & APIs',
+    masteryType: 'Pratiquée',
+    level: 92,
     color: '#10B981',
     iconName: 'Network',
-    description: 'Conception de standards d\'API RESTful, documentation Swagger/Postman, rate limiting, JWT & OAuth2.',
-    popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+', 'CYBER-SHIELD']
+    description: 'Conception d\'APIs RESTful pour lier React et Laravel : verbes HTTP (GET, POST, PUT, DELETE), formatage JSON, codes statuts et parsing des payloads.',
+    popularProjects: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+']
   },
   {
-    id: 'git',
-    name: 'Git & GitHub',
-    category: 'Tools & Design',
-    level: 94,
+    id: 'laravel-auth',
+    name: 'Laravel Auth (Breeze & Jetstream)',
+    category: 'Backend & APIs',
+    masteryType: 'Pratiquée',
+    level: 89,
+    color: '#EF4444',
+    iconName: 'Lock',
+    description: 'Authentification, sessions, protection par Middlewares, routes sécurisées (/api/login, inscription) et gestion des contrôles d\'accès.',
+    popularProjects: ['Energy-Group Auth', 'Hygie+ Portails']
+  },
+  {
+    id: 'bootstrap-css',
+    name: 'Bootstrap & HTML5 / CSS3',
+    category: 'Web Full-Stack',
+    masteryType: 'Pratiquée',
+    level: 92,
+    color: '#7952B3',
+    iconName: 'Layout',
+    description: 'Intégration d\'interfaces web responsives, grilles CSS flexibles, ergonomie mobile et personnalisation de composants Bootstrap.',
+    popularProjects: ['Sites web vitrines', 'Interfaces de gestion', 'Dashboards']
+  },
+  {
+    id: 'git-github',
+    name: 'Git, GitHub & SSH',
+    category: 'Outils & Méthodes',
+    masteryType: 'Pratiquée',
+    level: 90,
     color: '#F05032',
     iconName: 'GitBranch',
-    description: 'Gestion de versions avancée, Gitflow, pull requests, revues de code rigoureuses et workflows CI/CD GitHub Actions.',
+    description: 'Gestion de versions distribuée, branches de développement, dépôts distants GitHub et authentification par clés SSH pour dépôts privés.',
     popularProjects: ['Tous les projets']
+  },
+  {
+    id: 'uml-argouml',
+    name: 'UML & ArgoUML',
+    category: 'Conception & Modélisation',
+    masteryType: 'Pratiquée',
+    level: 88,
+    color: '#0EA5E9',
+    iconName: 'FolderTree',
+    description: 'Modélisation rigoureuse de logiciels : diagrammes de cas d\'utilisation (Use Cases), diagrammes de classes et diagrammes de séquence avec ArgoUML.',
+    popularProjects: ['Conception Hygie+', 'Architecture Systèmes Monétiques']
+  },
+  {
+    id: 'monetique-iso',
+    name: 'ISO 8583 & ISO8583 Studio',
+    category: 'Monétique & Paiement',
+    masteryType: 'Pratiquée',
+    level: 86,
+    color: '#D97706',
+    iconName: 'CreditCard',
+    description: 'Norme internationale des transactions financières électroniques (cartes bancaires, DAB/GAB, TPE), décodage de trames monétiques et simulation sur ISO8583 Studio.',
+    popularProjects: ['Formation Monétique', 'Simulations Bancaires']
+  },
+  {
+    id: 'fedapay',
+    name: 'FedaPay (Passerelle de Paiement)',
+    category: 'Monétique & Paiement',
+    masteryType: 'Pratiquée',
+    level: 87,
+    color: '#059669',
+    iconName: 'DollarSign',
+    description: 'Intégration de paiements en ligne sécurisés multi-canaux (Mobile Money MTN/Moov, cartes bancaires) dans des solutions web (Hygie+).',
+    popularProjects: ['HYGIE+ Pharmacie', 'Modules e-commerce']
+  },
+  {
+    id: 'wamp',
+    name: 'WAMP Server',
+    category: 'Outils & Méthodes',
+    masteryType: 'Pratiquée',
+    level: 90,
+    color: '#D97706',
+    iconName: 'HardDrive',
+    description: 'Configuration et exploitation d\'un environnement local complet (Apache, PHP, MySQL, phpMyAdmin) sous Windows pour le développement web.',
+    popularProjects: ['Développement Local PHP / Laravel']
+  },
+
+  // --- TECHNOLOGIES & OUTILS ABORDÉS / EXPLORÉS ---
+  {
+    id: 'javacard',
+    name: 'Java Card',
+    category: 'Monétique & Paiement',
+    masteryType: 'Notion / Abordée',
+    level: 70,
+    color: '#DC2626',
+    iconName: 'Cpu',
+    description: 'Technologie de programmation pour cartes à puce sécurisées et applets cryptographiques dans le domaine bancaire et monétique.',
+    popularProjects: ['Cursus Monétique']
+  },
+  {
+    id: 'packet-tracer',
+    name: 'Cisco Packet Tracer',
+    category: 'Réseaux & Systèmes',
+    masteryType: 'Notion / Abordée',
+    level: 72,
+    color: '#0284C7',
+    iconName: 'Share2',
+    description: 'Simulation de réseaux informatiques, adressage IP, interconnexion de routeurs, commutateurs et principes de routage.',
+    popularProjects: ['Travaux pratiques Réseaux']
+  },
+  {
+    id: 'systems-admin',
+    name: 'Linux & Administration Windows',
+    category: 'Réseaux & Systèmes',
+    masteryType: 'Notion / Abordée',
+    level: 70,
+    color: '#EAB308',
+    iconName: 'Terminal',
+    description: 'Notions d\'administration système, commandes fondamentales de terminal, gestion des permissions et environnements serveurs.',
+    popularProjects: ['Gestion serveurs locaux']
   },
   {
     id: 'figma',
     name: 'Figma',
-    category: 'Tools & Design',
-    level: 88,
+    category: 'Design & Prototypage',
+    masteryType: 'Pratiquée',
+    level: 82,
     color: '#F24E1E',
     iconName: 'Palette',
-    description: 'Design systems complets, wireframing, prototypage haute fidélité, micro-interactions et accessibilité UI/UX.',
-    popularProjects: ['Energy-Group UI', 'Les Coursiers du Coin', 'ARIYA UI', 'HYGIE+']
+    description: 'Wireframing, maquettage complet d\'applications web (Hygie+), composants d\'interface et préparation de maquettes pour l\'intégration.',
+    popularProjects: ['Hygie+ Maquette', 'Energy-Group UI', 'Les Coursiers du Coin UI']
   },
   {
-    id: 'cybersecurity',
-    name: 'Cybersecurity',
-    category: 'Security & AI',
+    id: 'alpine-tailwind',
+    name: 'Tailwind CSS & Alpine.js',
+    category: 'Web Full-Stack',
+    masteryType: 'Pratiquée',
     level: 90,
     color: '#06B6D4',
-    iconName: 'ShieldCheck',
-    description: 'Audit OWASP Top 10, protection contre XSS/CSRF/SQLi, durcissement des serveurs, politiques CSP et cryptographie.',
-    popularProjects: ['CYBER-SHIELD', 'HYGIE+ Health Data', 'Energy-Group API']
+    iconName: 'Layout',
+    description: 'Stylisation moderne utilitaire, composants dynamiques légers et design d\'interfaces web responsives.',
+    popularProjects: ['Sites vitrines', 'EnergyGroupe', 'Les Coursiers du Coin']
   },
   {
-    id: 'ai',
-    name: 'AI & LLMs',
-    category: 'Security & AI',
-    level: 89,
-    color: '#A855F7',
+    id: 'render',
+    name: 'Render & Cloud Hosting',
+    category: 'Réseaux & Systèmes',
+    masteryType: 'Notion / Abordée',
+    level: 72,
+    color: '#46E3B7',
+    iconName: 'Cloud',
+    description: 'Exploration du déploiement cloud d\'applications et d\'hébergement de services (notamment bot Discord et backends légers).',
+    popularProjects: ['Hébergement de bots & tests']
+  },
+  {
+    id: 'lovable-sitebuilders',
+    name: 'Lovable & Générateurs Web IA',
+    category: 'IA & Création Numérique',
+    masteryType: 'Notion / Abordée',
+    level: 76,
+    color: '#EC4899',
+    iconName: 'Globe',
+    description: 'Exploration d\'outils modernes de génération de sites et prototypage web assisté par IA pour accélérer les maquettes.',
+    popularProjects: ['Prototypage ARIYA']
+  },
+  {
+    id: 'generative-ai',
+    name: 'IA Générative, LLMs & Prompt Engineering',
+    category: 'IA & Création Numérique',
+    masteryType: 'Notion / Abordée',
+    level: 80,
+    color: '#8B5CF6',
     iconName: 'Sparkles',
-    description: 'Intégration d\'APIs d\'IA avancées (Gemini, OpenAI), prompt engineering, modèles multimodaux et architectures RAG.',
-    popularProjects: ['HYGIE+ Prescription AI', 'NEXUS AI']
+    description: 'Pratique de la rédaction de prompts précis pour la génération d\'images, de textes structurés et l\'assistance au codage.',
+    popularProjects: ['Création visuelle', 'Veille technologique LLM']
   },
   {
-    id: 'threejs',
-    name: 'Three.js & WebGL',
-    category: 'Frontend',
-    level: 86,
-    color: '#FFFFFF',
-    iconName: 'Box',
-    description: 'Scènes 3D interactives dans le navigateur, shaders, éclairages dynamiques, particules et animations caméra.',
-    popularProjects: ['Portfolio 3D', 'AURORA 3D', 'CYBER-SHIELD 3D']
+    id: 'video-editing-ai',
+    name: 'Montage Vidéo IA & Contenu Digital',
+    category: 'IA & Création Numérique',
+    masteryType: 'Notion / Abordée',
+    level: 74,
+    color: '#06B6D4',
+    iconName: 'Video',
+    description: 'Création de contenu digital (TikTok) et utilisation d\'outils de montage assistés par intelligence artificielle.',
+    popularProjects: ['Contenus digitaux & Vidéos']
   }
 ];
 
 export const TIMELINE_DATA: TimelineStep[] = [
   {
-    id: 'step-1',
-    year: '2021 — 2022',
-    title: 'Fondations & Ingénierie Logicielle',
-    subtitle: 'Diplôme & Formation Académique d\'Excellence',
-    organization: 'Université Technologique & Instituts Numériques',
-    location: 'Cursus Supérieur en Informatique',
-    description: 'Apprentissage approfondi des structures de données fondamentales, algorithmique avancée, architecture des ordinateurs et programmation orientée objet (C, Java, bases de données relationnelles SQL).',
-    skills: ['Algorithmique', 'Structures de Données', 'POO', 'Architecture Logicielle', 'SQL'],
-    type: 'education',
-    icon: 'GraduationCap',
-    glowColor: '#8B5CF6'
-  },
-  {
-    id: 'step-2',
-    year: '2022 — 2023',
-    title: 'Développement Web Full-Stack & Projets',
-    subtitle: 'Immersion dans les technologies modernes',
-    organization: 'Web Craft Academy & Ateliers Innovants',
-    location: 'Full-Stack Modern Stack',
-    description: 'Maîtrise de l\'écosystème PHP/Laravel et JavaScript/React. Conception et déploiement de plusieurs applications web complètes avec architectures MVC et consommation d\'APIs RESTful sécurisées.',
-    skills: ['Laravel', 'PHP', 'React.js', 'JavaScript ES6+', 'REST API', 'MySQL'],
+    id: 'stage-kingsoft',
+    year: '18 mai – 18 juin 2026',
+    title: 'Stage Académique — KingSoft Digital',
+    subtitle: 'Initiation au développement web professionnel avec Laravel',
+    organization: 'KingSoft Digital',
+    location: 'Cotonou, Bénin',
+    description: 'Initiation au développement web professionnel avec Laravel. Découverte et pratique concrète du cycle de développement en environnement d’entreprise.',
+    skills: ['Laravel', 'PHP', 'Cycle de développement', 'Architecture MVC', 'Travail en entreprise'],
     type: 'experience',
-    icon: 'Code2',
-    glowColor: '#EC4899'
+    icon: 'Briefcase',
+    glowColor: '#4B5320'
   },
   {
-    id: 'step-3',
-    year: '2023 — 2024',
-    title: 'Projets Majeurs & Impact Numérique',
-    subtitle: 'Création d\'Energy-Group, Les Coursiers du Coin, HYGIE+ & ARIYA',
-    organization: 'Digital Builder & Projets d\'Envergure',
-    location: 'Innovation & Tech for Good',
-    description: 'Conception et développement de solutions de référence : la plateforme de monitoring énergétique Energy-Group, l\'application de logistique urbaine Les Coursiers du Coin, ainsi que les plateformes HYGIE+ et ARIYA.',
-    skills: ['Energy-Group', 'Les Coursiers du Coin', 'HYGIE+', 'ARIYA', 'React.js', 'Laravel', 'WebSockets', 'Architecture'],
+    id: 'projet-hygie',
+    year: '2025 — 2026',
+    title: 'Hygie+ | Plateforme de Comparaison Prix Pharmacies',
+    subtitle: 'Projet académique en équipe - Mémoire (avec Lauriane FAGBEMI)',
+    organization: 'Institut Supérieur Golden Academy',
+    location: 'Cotonou, Bénin',
+    description: 'Conception et développement d’une application web de comparaison de prix entre pharmacies. Modélisation UML/StarUML, maquettage Figma, développement React.js + Laravel/Blade, base de données MySQL.',
+    skills: ['React.js', 'Laravel', 'Blade', 'MySQL', 'StarUML', 'Figma'],
     type: 'projects',
     icon: 'Rocket',
+    glowColor: '#10B981'
+  },
+  {
+    id: 'projet-coursiers',
+    year: '2024 — 2025',
+    title: 'Les Coursiers du Coin | App de Livraison',
+    subtitle: 'Projet personnel de mise en relation livreurs / clients',
+    organization: 'Projet Personnel',
+    location: 'Cotonou & Calavi, Bénin',
+    description: 'Application web de mise en relation livreurs / clients. Développée avec HTML, CSS, JavaScript et React.js. Démo en ligne : https://courier-corner-app.vercel.app',
+    skills: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Cotonou & Calavi'],
+    type: 'projects',
+    icon: 'Code2',
+    glowColor: '#F59E0B'
+  },
+  {
+    id: 'projet-energygroupe',
+    year: '2024',
+    title: 'EnergyGroupe | Site Vitrine',
+    subtitle: 'Projet personnel - Secteur électricité & plomberie',
+    organization: 'Projet Personnel',
+    location: 'Cotonou, Bénin',
+    description: 'Conception et intégration d’un site vitrine responsive pour une entreprise de travaux. Stack : HTML, CSS, JavaScript, React.js. Démo en ligne : https://energy-groupe.tech',
+    skills: ['HTML', 'CSS', 'JavaScript', 'React.js', 'Site Vitrine Responsive'],
+    type: 'projects',
+    icon: 'Globe',
     glowColor: '#06B6D4'
   },
   {
-    id: 'step-4',
-    year: '2024 — 2025',
-    title: 'Expériences Professionnelles & Solutions Métiers',
-    subtitle: 'Développeuse Full-Stack & Consultante Tech',
-    organization: 'Collaborations Entreprises & Équipes Agiles',
-    location: 'SaaS & Digital Transformation',
-    description: 'Développement d\'outils métiers, refactorisation d\'applications legacy vers des micro-services modernes, collaboration avec des équipes pluridisciplinaires et optimisation des temps de réponse serveurs.',
-    skills: ['TypeScript', 'CI/CD GitHub Actions', 'Docker', 'Performances Web', 'Gestion de Projet Agile'],
-    type: 'experience',
-    icon: 'Briefcase',
-    glowColor: '#A855F7'
+    id: 'formation-licence-monetique',
+    year: 'Sept 2025 — 2026',
+    title: 'Licence en Monétique',
+    subtitle: 'Institut Supérieur Golden Academy (GOLDEN ACADEMY)',
+    organization: 'GOLDEN ACADEMY',
+    location: 'Akpakpa ; Cotonou au BÉNIN',
+    description: 'Titulaire de la Licence en Monétique à Institut Supérieur Golden Academy à Akpakpa ; Cotonou au BÉNIN. Formation aux systèmes financiers électroniques, modélisation UML, bases de données et architectures logicielles.',
+    skills: ['Monétique', 'Transactions bancaires', 'Systèmes de paiement', 'UML', 'MySQL'],
+    type: 'education',
+    icon: 'GraduationCap',
+    glowColor: '#4B5320'
   },
   {
-    id: 'step-5',
-    year: '2025 — Présent',
-    title: 'Spécialisation : Cybersécurité & Intelligence Artificielle',
-    subtitle: 'Sécurisation des architectures web & Intégrations IA générative',
-    organization: 'Laboratoire Tech & Certifications Avancées',
-    location: 'Cybersécurité & R&D IA',
-    description: 'Approfondissement des audits de sécurité web (OWASP, protection des données sensibles), création de la suite CYBER-SHIELD et intégration d\'agents intelligents et de modèles de langage (LLMs) dans les produits digitaux.',
-    skills: ['Audits OWASP', 'Sécurité Web', 'LLM / Gemini API', 'Three.js 3D Web', 'Next-Gen UI'],
-    type: 'specialization',
-    icon: 'ShieldCheck',
-    glowColor: '#10B981'
+    id: 'formation-bac-d',
+    year: 'Sep 2022 — Juin 2023',
+    title: 'Baccalauréat D (Scientifique)',
+    subtitle: 'Complexe Scolaires Saint Augustin (CSSA)',
+    organization: 'CSSA',
+    location: 'Cotonou au BÉNIN',
+    description: 'Titulaire du BAC D (Baccalauréat série Scientifique D) au Complexe Scolaires Saint Augustin à Cotonou au BÉNIN. Solide socle de raisonnement logique, sciences et méthodologie.',
+    skills: ['Baccalauréat Scientifique D', 'Mathématiques', 'Sciences physiques', 'Logique'],
+    type: 'education',
+    icon: 'GraduationCap',
+    glowColor: '#6B7D50'
   }
 ];
 
@@ -386,52 +564,52 @@ export const SERVICES_DATA: ServiceItem[] = [
   {
     id: 'web-dev',
     icon: 'Globe',
-    title: 'Web Development',
-    subtitle: 'Applications Web Modernes & Scalables',
-    description: 'Création d\'applications web Single-Page (SPA) et plateformes SaaS performantes, fluides et responsives avec React.js, TypeScript et Laravel.',
-    highlights: ['Architecture propre & modulaire', 'Temps de chargement < 1s', 'Optimisation SEO & Mobile first', 'Expérience utilisateur ultra-fluide'],
+    title: 'Développement Web Full-Stack',
+    subtitle: 'Applications React.js, TSX & Laravel',
+    description: 'Conception de Single-Page Applications (SPA) et plateformes modernes avec React.js, TypeScript, Vite et backend Laravel 11, avec styles soignés et responsive.',
+    highlights: ['React.js + TSX & Vite', 'Backend Laravel 11 MVC', 'Responsive Bootstrap & CSS', 'Performance & code propre'],
     glowColor: 'purple',
-    badge: 'Core Expertise'
-  },
-  {
-    id: 'ui-ux',
-    icon: 'Palette',
-    title: 'UI/UX & Creative Design',
-    subtitle: 'Interfaces Immersives & Intuitives',
-    description: 'Design d\'interfaces visuelles percutantes sur Figma, micro-interactions soignées, design systems cohérents et intégration 3D WebGL.',
-    highlights: ['Design System complet', 'Animations 60 FPS', 'Prototypes interactifs Figma', 'Dark/Light mode sophistiqué'],
-    glowColor: 'pink',
-    badge: 'Visual Craft'
+    badge: 'Cœur de Métier'
   },
   {
     id: 'backend-dev',
     icon: 'Server',
-    title: 'Backend & API Architecture',
-    subtitle: 'Moteurs Logiques Robustes & Sécurisés',
-    description: 'Développement d\'APIs RESTful haute disponibilité avec Laravel et Node.js, modélisation de bases MySQL performantes et traitement asynchrone.',
-    highlights: ['Bases relationnelles optimisées', 'Authentification JWT / OAuth2', 'Systèmes de paiement sécurisés', 'WebSockets temps réel'],
+    title: 'APIs REST & Architecture Backend',
+    subtitle: 'Logique Métier, Middlewares & Données',
+    description: 'Développement d\'APIs RESTful sécurisées pour relier le frontend React au backend Laravel, gestion fine de l\'authentification (Breeze/Jetstream), middlewares et base MySQL.',
+    highlights: ['Routes sécurisées & Middlewares', 'Méthodes HTTP & payloads JSON', 'Base relationnelle MySQL', 'Environnement WAMP / Local'],
     glowColor: 'cyan',
-    badge: 'High Reliability'
+    badge: 'Robuste & Fiable'
   },
   {
-    id: 'cybersecurity',
-    icon: 'ShieldCheck',
-    title: 'Cybersecurity & Audits',
-    subtitle: 'Protection des Données & Résilience',
-    description: 'Audit de sécurité selon les normes OWASP, durcissement des applications web, sécurisation des flux de données sensibles et conformité.',
-    highlights: ['Prévention failles XSS, SQLi, CSRF', 'En-têtes de sécurité renforcés', 'Chiffrement des données sensibles', 'Rapports d\'audit détaillés'],
+    id: 'monetique',
+    icon: 'CreditCard',
+    title: 'Monétique & Solutions de Paiement',
+    subtitle: 'Protocoles Bancaires & Intégration FedaPay',
+    description: 'Expertise issue de la formation en Monétique : étude des protocoles financiers (ISO 8583, ISO8583 Studio), cartes à puce (Java Card) et intégration de la passerelle FedaPay.',
+    highlights: ['Intégration passerelle FedaPay', 'Norme ISO 8583 bancaire', 'Simulation ISO8583 Studio', 'Notions Java Card'],
     glowColor: 'emerald',
-    badge: 'Trust & Shield'
+    badge: 'Spécialisation Monétique'
   },
   {
-    id: 'ai-integration',
-    icon: 'Sparkles',
-    title: 'AI & Smart Features',
-    subtitle: 'Intelligence Artificielle Connectée',
-    description: 'Intégration d\'agents intelligents et de modèles de langage (LLMs / Vision) dans vos applications pour automatiser et enrichir l\'expérience utilisateur.',
-    highlights: ['Intégration APIs Gemini & OpenAI', 'Traitement intelligent de documents', 'Chatbots & assistants sur mesure', 'Workflows d\'IA générative'],
+    id: 'conception-uml',
+    icon: 'FolderTree',
+    title: 'Conception & Modélisation UML',
+    subtitle: 'Analyse Rigoureuse & Spécifications',
+    description: 'Modélisation préalable des architectures logicielles avec ArgoUML : formalisation des besoins métiers, acteurs, diagrammes de cas d\'utilisation, de classes et de séquences.',
+    highlights: ['Diagrammes de Cas d\'Utilisation', 'Diagrammes de Classes', 'Diagrammes de Séquences', 'Outil ArgoUML & Documentation'],
     glowColor: 'purple',
-    badge: 'Future Tech'
+    badge: 'Génie Logiciel'
+  },
+  {
+    id: 'outils-ia',
+    icon: 'Sparkles',
+    title: 'Prototypage & Création Numérique',
+    subtitle: 'Figma, Prompt Engineering & Outils IA',
+    description: 'Utilisation pragmatique d\'outils modernes : maquettes Figma, prompt engineering avancé pour la génération de visuels, accélération du prototypage et création de contenus.',
+    highlights: ['Maquettage & Wireframing Figma', 'Prompt engineering précis', 'Générateurs web & exploratoires', 'Création de formats digitaux'],
+    glowColor: 'pink',
+    badge: 'Créativité & Veille'
   }
 ];
 
@@ -440,33 +618,32 @@ export const STATS_DATA: StatItem[] = [
     id: 'stat-projects',
     value: 15,
     suffix: '+',
-    label: 'Projets Conçus',
-    description: 'Plateformes web, SaaS et solutions numériques livrées avec succès.',
+    label: 'Projets & Travaux Réalisés',
+    description: 'Applications web, SaaS, intégrations d\'API et modélisations logicielles.',
     icon: 'Briefcase'
   },
   {
     id: 'stat-tech',
-    value: 12,
-    suffix: '+',
-    label: 'Technologies Clés',
-    description: 'Du frontend réactif au backend sécurisé en passant par l\'IA & la 3D.',
+    value: 14,
+    suffix: '',
+    label: 'Compétences Pratiquées',
+    description: 'Stack complète : Laravel, React, PHP, MySQL, REST API, UML & Monétique.',
     icon: 'Code'
   },
   {
     id: 'stat-years',
-    value: 4,
+    value: 3,
     suffix: '+',
-    label: 'Années d\'Apprentissage & Pratique',
-    description: 'Passion constante pour l\'artisanat du code et la veille technologique.',
+    label: 'Années d\'Études & Pratique',
+    description: 'Formation spécialisée en informatique, web moderne et systèmes monétiques.',
     icon: 'Sparkles'
   },
   {
-    id: 'stat-ideas',
-    value: 999,
-    suffix: '∞',
-    prefix: '',
-    label: 'Idées & Créativité Digitale',
-    description: 'Toujours prête à repousser les limites des expériences interactives.',
+    id: 'stat-explored',
+    value: 9,
+    suffix: '+',
+    label: 'Technologies Abordées',
+    description: 'Veille active : Java Card, Cisco, Figma, IA générative, Cloud & 3D.',
     icon: 'Zap'
   }
 ];

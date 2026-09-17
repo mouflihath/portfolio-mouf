@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowUp, Heart, Code2, Sparkles } from 'lucide-react';
+import { ArrowUp, Heart, Github, Linkedin } from 'lucide-react';
 import { DEVELOPER_INFO } from '../data/portfolioData';
 import { soundFX } from '../utils/audio';
 import { PageId } from './Navbar';
@@ -25,38 +25,25 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
   ];
 
   return (
-    <footer className="relative py-12 border-t border-[#A3B899]/60 bg-[#F4F7F2] overflow-hidden">
-      {/* Background ambient line */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-[1px] bg-gradient-to-r from-transparent via-[#4B5320]/30 to-transparent" />
-
+    <footer className="relative py-12 border-t border-slate-200 bg-slate-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-[#A3B899]/40">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-200">
           {/* Left: Branding */}
           <button
             onClick={() => {
               onNavigate('home');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
-            className="flex items-center gap-3 text-left cursor-pointer group"
+            className="flex items-center text-left cursor-pointer group"
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#2E3A20] via-[#4B5320] to-[#5E7044] p-[1.5px] shadow-md shadow-[#4B5320]/20">
-              <div className="w-full h-full bg-white rounded-[10px] flex items-center justify-center">
-                <Code2 className="w-5 h-5 text-[#4B5320]" />
-              </div>
-            </div>
-            <div>
-              <p className="font-heading font-extrabold text-base text-slate-900 tracking-wider group-hover:text-[#4B5320] transition-colors">
-                {DEVELOPER_INFO.firstName.toUpperCase()}
-              </p>
-              <p className="text-[11px] font-mono text-[#4B5320] font-semibold">
-                Développeuse Full-Stack • Solutions Numériques
-              </p>
-            </div>
+            <span className="font-heading font-black text-xl sm:text-2xl tracking-tight text-slate-900 group-hover:text-emerald-600 transition-colors">
+              Portfolio<span className="text-emerald-500">.</span>
+            </span>
           </button>
 
-          {/* Center: Multi-page navigation shortcuts */}
-          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 text-xs font-heading font-semibold text-slate-700">
+          {/* Center: Navigation shortcuts */}
+          <div className="flex flex-wrap justify-center items-center gap-3 sm:gap-5 text-xs font-heading font-medium text-slate-600">
             {navLinks.map((link) => (
               <button
                 key={link.id}
@@ -65,32 +52,58 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
                   onNavigate(link.id);
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="hover:text-[#4B5320] transition-colors cursor-pointer"
+                className="hover:text-slate-900 transition-colors cursor-pointer"
               >
                 {link.label}
               </button>
             ))}
           </div>
 
-          {/* Right: Back to Top Button */}
-          <button
-            onClick={scrollToTop}
-            className="group px-4 py-2.5 rounded-2xl bg-white border border-[#A3B899]/60 hover:border-[#4B5320] text-slate-700 hover:text-black transition-all flex items-center gap-2 text-xs font-mono font-bold tracking-wider cursor-pointer shadow-sm hover:shadow-[#4B5320]/10 active:scale-95"
-          >
-            <span>RETOUR EN HAUT</span>
-            <ArrowUp className="w-4 h-4 text-[#4B5320] group-hover:-translate-y-1 transition-transform" />
-          </button>
+          {/* Right: Socials & Back to Top */}
+          <div className="flex items-center gap-2.5">
+            <a
+              href={DEVELOPER_INFO.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => soundFX.playClick()}
+              className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-black hover:bg-slate-100 transition-all shadow-sm cursor-pointer"
+              title="Profil GitHub"
+              aria-label="GitHub"
+            >
+              <Github className="w-4 h-4" />
+            </a>
+
+            <a
+              href={DEVELOPER_INFO.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => soundFX.playClick()}
+              className="p-2.5 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-blue-600 hover:bg-slate-100 transition-all shadow-sm cursor-pointer"
+              title="Profil LinkedIn"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+
+            <button
+              onClick={scrollToTop}
+              className="px-3.5 py-2 rounded-xl bg-white border border-slate-200 text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-all flex items-center gap-1.5 text-xs font-mono font-bold tracking-wider cursor-pointer shadow-sm active:scale-95"
+            >
+              <span>HAUT</span>
+              <ArrowUp className="w-3.5 h-3.5 text-emerald-600" />
+            </button>
+          </div>
         </div>
 
-        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-600">
+        <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-slate-500">
           <p className="flex items-center gap-1.5 font-normal">
-            Développé avec <Heart className="w-4 h-4 text-[#4B5320] fill-[#4B5320]" /> par{' '}
-            <strong className="text-slate-900 font-bold font-heading">
+            Conçu &amp; Développé avec rigueur par{' '}
+            <strong className="text-slate-800 font-bold">
               {DEVELOPER_INFO.fullName}
             </strong>
           </p>
           <p className="text-slate-500">
-            📍 Bénin (Centre d'accueil) • © {new Date().getFullYear()} Tous droits réservés
+            📍 Cotonou, Bénin • © {new Date().getFullYear()} Tous droits réservés
           </p>
         </div>
 
@@ -98,4 +111,3 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
     </footer>
   );
 };
-
